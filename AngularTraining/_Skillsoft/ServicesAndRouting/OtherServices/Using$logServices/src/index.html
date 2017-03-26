@@ -1,0 +1,22 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Using $log Services</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Using $log Services'}}
+		<div ng-controller="MainController as main">
+
+			
+			<p><button ng-click="main.logClicked('this is useless log data')">Log</button></p>
+			<p><button ng-click="main.infoClicked('this is useless INFO data')">INFO</button></p>
+			<p><button ng-click="main.warnClicked('this is useless WARN data')">WARN</button></p>
+			<p><button ng-click="main.errorClicked('this is useless ERROR data')">ERROR</button></p>
+			<p><button ng-click="main.debugClicked('this is useless DEBUG data')">DEBUG</button></p>
+		</div>
+</body>
+</html>

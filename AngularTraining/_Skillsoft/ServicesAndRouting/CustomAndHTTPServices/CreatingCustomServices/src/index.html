@@ -1,0 +1,39 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Creating Custom Services</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Creating Custom Services'}}
+		<div ng-controller="MainController as main">
+
+			<p>Edit from service: <input type="text" ng-model="main.model.user.name"></p>
+			<p><button ng-click="main.model.sayHello()">Say Hello</button></p>
+			
+			<div ng-controller="FirstController as first">
+			
+				<p>Edit first: <input type="text" ng-model="first.user.name"></p>
+				<hr/>
+				<p>Shared from service: {{first.model.user.name}}</p>
+				<p>Shared from first:   {{first.user.name}}</p>
+				<p>Shared from second:  {{second.user.name}}</p>
+				<p><button ng-click="first.model.sayHello()">Say Hello</button></p>			
+			</div>
+			
+			<div ng-controller="SecondController as second">
+			
+				<p>Edit second: <input type="text" ng-model="second.user.name"></p>
+				<hr/>
+				<p>Shared from service: {{second.model.user.name}}</p>
+				<p>Shared from first:   {{first.user.name}}</p>
+				<p>Shared from second:  {{second.user.name}}</p>
+				<p><button ng-click="second.model.sayHello()">Say Hello</button></p>		
+			</div>
+			
+		</div>
+</body>
+</html>

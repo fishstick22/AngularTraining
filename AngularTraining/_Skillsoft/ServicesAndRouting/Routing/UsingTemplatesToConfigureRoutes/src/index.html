@@ -1,0 +1,20 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Using Templates To Configure Routes</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="../../../../../libs/angular-route.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Using Templates To Configure Routes'}}
+	<div>
+		<a href="#!/welcome">Welcome</a> |
+		<a href="#!/about">About</a> |
+	</div>
+	<ng-view></ng-view>
+	
+</body>
+</html>

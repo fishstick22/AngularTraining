@@ -1,0 +1,35 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Using $compile Services</title>
+	<script type="text/javascript" src="../../../../../libs/jquery-3.1.1.js"></script>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Using $compile Services'}}
+		<div ng-controller="MainController as main">
+
+			
+			<p>Enter field Label:</p>
+			<p><input type="text" ng-model="main.fieldLabel"></p>
+			
+			<p>Enter HTML for new input field:</p>
+			<p><textarea id="htmlInput" ng-model="main.htmlMarkup">
+			</textarea></p>			
+			
+			<p><button ng-click="main.addNewField(main.htmlMarkup)">Add New Field</button></p>
+			
+			<hr/>
+			
+			<div id="myDiv">
+				<p>Placeholder Container:</p>
+			</div>
+			
+		</div>
+
+</body>
+</html>
+

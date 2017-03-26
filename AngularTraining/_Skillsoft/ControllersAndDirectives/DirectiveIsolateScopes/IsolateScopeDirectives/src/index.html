@@ -1,0 +1,21 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Examining Isolate Scope Directives</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Examining Isolate Scope Directives'}}
+		<div ng-controller="MainController">
+			{{item}}
+			
+			<tst-vehicle-view item="firstItem"></tst-vehicle-view>
+		
+			<tst-vehicle-view item="secondItem"></tst-vehicle-view>
+			
+		</div>
+</body>
+</html>

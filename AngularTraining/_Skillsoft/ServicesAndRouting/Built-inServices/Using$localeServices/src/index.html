@@ -1,0 +1,21 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Using $locale Services</title>	
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="../../../../../libs/i18n/angular-locale_fr.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Using $locale Services'}}
+		<div ng-controller="MainController as main">
+
+			
+			<p>The current date in the current language is {{ main.date | date:formattedDate }}</p>
+			<p>The cost per year {{ main.cost | currency }}</p>
+			
+		</div>
+</body>
+</html>

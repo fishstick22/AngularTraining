@@ -1,0 +1,25 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Using Services To GET Data</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Using Services To GET Data'}}
+		<div ng-controller="MainController as main">
+
+			<p><button ng-click="main.model.getStates()">Get States</button></p>
+			
+			<ul>
+				<li ng-repeat="state in main.model.states">
+					{{state.name}} ({{state.abbreviation}})
+				</li>
+			</ul>
+			
+			
+		</div>
+</body>
+</html>

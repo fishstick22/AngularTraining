@@ -1,0 +1,20 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Reading Query Strings</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="../../../../../libs/angular-route.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Reading Query Strings'}}
+	<div>
+		<a href="#!/welcome?firstName=David&lastName=Smith">Query String Params #1</a> |
+		<a href="#!/welcome?userId=5437-sdsd-4354ddd-345-dsd">Query String Params #2</a> |
+	</div>
+			
+	<ng-view></ng-view>
+</body>
+</html>

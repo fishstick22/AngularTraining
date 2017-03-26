@@ -1,0 +1,24 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Performing Client-side Routing</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="../../../../../libs/angular-route.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Performing Client-sideRouting'}}
+	<div>
+		<a href="#!/welcome">Welcome</a> |
+		<a href="#!/about">About</a> |
+	</div>
+	
+	<div ng-controller="NavController as nav">
+		<button ng-click="nav.goto('/welcome')">Welcome</button>
+		<button ng-click="nav.goto('/about')">About</button>
+	</div>
+	<ng-view></ng-view>
+</body>
+</html>

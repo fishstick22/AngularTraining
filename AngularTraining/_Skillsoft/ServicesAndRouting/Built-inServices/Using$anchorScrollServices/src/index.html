@@ -1,0 +1,21 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Using $anchorScroll Services</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Using $anchorScroll Services'}}
+		<div ng-controller="MainController as main">
+
+			
+			<a id="topLink" href="" ng-click="main.jumpToBottom()">This is top. Click to go to the bottom</a>
+			<div style="height:10000px"></div>
+			<a id="bottomLink" href="" ng-click="main.jumpToTop()">This is bottom. Click to go to the top</a>
+			
+		</div>
+</body>
+</html>

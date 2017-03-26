@@ -1,0 +1,25 @@
+<html ng-app="myApp">
+
+<head>
+	<title>SUsing ngList Directives</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+
+</head>
+<body>
+
+	{{'Using ngList Directives'}}
+	<div ng-controller="MainController as main">
+
+		<p>edit names: </p>
+		<p><input type="text" ng-list="|" ng-model="main.names"></p>
+
+		<hr/>
+		<p> binding to names: {{ main.names }}</p>
+		<p> type of name is: {{ main.getType(main.names) }}</p>
+		<p> first name in array: {{ main.names[0] }}</p>
+		
+	</div>
+</body>
+</html>

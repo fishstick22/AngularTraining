@@ -1,0 +1,29 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Using $q Services</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Using $q Services'}}
+		<div ng-controller="MainController as main">
+
+		<h3>Get users:</h3>
+		<p><button ng-click="main.getUsersSync()">Get Users Sync</button></p>
+		<p><button ng-click="main.getUsersAsyncBad()">Get Users Async Bad</button></p>
+		<p><button ng-click="main.getUsersAsync(true)">Get Users Async success</button></p>
+		<p><button ng-click="main.getUsersAsync(false)">Get Users Async fail</button></p>
+
+		<hr/>
+		<ul>
+			<li ng-repeat="user in main.users">
+				{{ user.name }} : {{ user.id }}
+			</li>
+		</ul>			
+		
+		</div>
+</body>
+</html>

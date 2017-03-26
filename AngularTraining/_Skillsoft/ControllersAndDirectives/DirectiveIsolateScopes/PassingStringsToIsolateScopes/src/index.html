@@ -1,0 +1,28 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Passing Strings to Isolate Scopes</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Passing Strings to Isolate Scopes'}}
+		<div ng-controller="MainController as main">
+			
+			<tst-vehicle-view year="2013" make="Ford" info="{{main.firstItemInfo}}" model="Fielsta"></tst-vehicle-view>
+			
+			<tst-vehicle-view year="2015" make="Honda" info="{{main.secondItemInfo}}" model="Civic"></tst-vehicle-view>						
+		
+			<hr/>
+			
+			<p>First item: {{main.firstItemInfo}}</p>
+			<p><input type="text" ng-model="main.firstItemInfo.price"></p>
+			
+			<p>Second item: {{main.secondItemInfo}}</p>
+			<p><input type="text" ng-model="main.secondItemInfo.price"></p>			
+			
+		</div>
+</body>
+</html>

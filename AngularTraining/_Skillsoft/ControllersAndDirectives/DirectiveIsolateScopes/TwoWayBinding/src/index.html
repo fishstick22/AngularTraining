@@ -1,0 +1,26 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Setting Up Two-way Binding</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Setting Up Two-way Binding'}}
+		<div ng-controller="MainController">
+			{{item}}
+			
+			<span tst-vehicle-view item="firstItem"></span>
+		
+			<tst-vehicle-view item="secondItem"></tst-vehicle-view>
+			
+			<p>First Item Price:</p>
+			<p><input type="text" ng-model="firstItem.price"></p>
+			
+			<p>Second Item Price:</p>
+			<p><input type="text" ng-model="secondItem.price"></p>
+		</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Using ngIf Directives</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+
+</head>
+<body>
+
+	{{'Using ngIf Directives'}}
+	<div ng-controller="MainController">
+
+		<p>
+			Show user infor? <input type="radio" ng-model="showUser"
+				ng-value="true"> Yes <input type="radio" ng-model="showUser"
+				ng-value="false"> No
+		</p>
+
+		<hr />
+		<div ng-if="showUser == true">
+			<ul>
+				<li>{{ user.name }}</li>
+				<li>{{ user.age }}</li>
+				<li>{{ user.isActive }}</li>
+				<li>{{ hobbies }}</li>
+			</ul>
+
+			<hr />
+
+			<p>Name: <input type="text" ng-model="user.name"></p>
+			<p>Hobbies: <textarea type="text" ng-model="hobbies"></textarea></p>
+			
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Setting Up Routing</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="../../../../../libs/angular-route.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+<!-- http://stackoverflow.com/questions/41211875/angularjs-1-6-0-latest-now-routes-not-working
+  -- Due to aa077e8, the default hash-prefix used for $location hash-bang URLs has changed from the empty string ('') 
+  -- to the bang ('!').
+  -- https://github.com/angular/angular.js/pull/14202
+  -- For example, rather than mydomain.com/#/a/b/c will become mydomain/#!/a/b/c. -->
+	<div>
+		<a href="#!/welcome">Welcome</a> |
+		<a href="#!/about">About</a> |
+		<a href="#!/contact">Contact</a>
+	</div>
+			
+	<ng-view></ng-view>
+
+</body>
+</html>

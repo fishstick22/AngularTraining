@@ -1,0 +1,21 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Setting Dynamic Controllers</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Setting Dynamic Controllers'}}
+		<div ng-controller="MainController">
+			{{item}}
+			
+			<div tst-animal-view item="bird" controller-name="BirdController"></div>
+			<div tst-animal-view item="horse" controller-name="HorseController"></div>
+			<div tst-animal-view item="snake" controller-name="SnakeController"></div>
+			
+		</div>
+</body>
+</html>

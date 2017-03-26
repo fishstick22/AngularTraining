@@ -1,0 +1,35 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Using $http And $q Services Together</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Using $http And $q Services Together'}}
+		<div ng-controller="MainController as main">
+
+			
+			<h3>Get a State:</h3>
+			<p>
+				Abbreviation: <input type="text" ng-model="main.abbreviation">
+				<button ng-click="main.getState(main.abbreviation)">Get one state</button>
+			</p>
+			
+			<hr/>
+			
+				<button ng-click="main.getSomeStates()">Get a few states</button>
+				<button ng-click="main.getSomeStatesAtOnce()">Get a few states with $q.all</button>
+			
+			<hr/>
+			<ul>
+				<li ng-repeat"state in main.states">
+					{{state.name}} ({{ state.abbreviation}})
+				</li> 
+			</ul>
+			
+		</div>
+</body>
+</html>

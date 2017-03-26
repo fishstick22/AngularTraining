@@ -1,0 +1,29 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Using $filter Services</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Using $filter Services'}}
+		<div ng-controller="MainController as main">
+
+			<p>First value:</p>
+			<p>{{ main.firstValue | dashes }}</p>
+			
+			<hr/>
+			<p>Second value:</p>
+			<p>{{ main.secondValue }}</p>
+
+			<hr/>
+			<p>Change filter:</p>
+			<p><input type="text" ng-model="main.inputValue" ng-change="main.applyFilter()"></p>
+			<p>Third value:</p>
+			<p>{{ main.thirdValue }}</p>
+				
+		</div>
+</body>
+</html>

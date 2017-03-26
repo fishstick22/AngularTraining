@@ -1,0 +1,24 @@
+<html ng-app="myApp">
+
+<head>
+	<title>Communicating between Nested Directives</title>
+	<script type="text/javascript" src="../../../../../libs/angular.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<link rel="stylesheet" href="../../../../../styles/main.css">
+</head>
+<body>
+
+		{{'Communicating between Nested Directives'}}
+		<div ng-controller="MainController as main">
+			
+			<tst-school-view>
+			
+				<tst-student name="John Smith" student-number="123456789"></tst-student>		
+				<tst-student name="Sarah Silverman" student-number="5345435"></tst-student>
+				<tst-student name="Alexa Vegas" student-number="8656732"></tst-student>
+				
+			</tst-school-view>
+			
+		</div>
+</body>
+</html>
